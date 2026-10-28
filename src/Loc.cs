@@ -4,9 +4,8 @@ using System.Text.RegularExpressions;
 using Linecount.Errors;
 using Linecount.Logging;
 using Linecount.Result;
-
-using ReportResult = Linecount.Result.Result<Linecount.ILineCountReport, Linecount.Errors.IError>;
 using DirectoryReportResult = Linecount.Result.Result<Linecount.DirectoryLineCountReport, Linecount.Errors.IError>;
+using ReportResult = Linecount.Result.Result<Linecount.ILineCountReport, Linecount.Errors.IError>;
 
 namespace Linecount;
 

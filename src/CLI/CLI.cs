@@ -91,7 +91,7 @@ public sealed class LocRootCommand : RootCommand
         var (excludeFiles, excludeDirectories) = DetermineExclusions(excluded);
 
         var result = await Loc.Run(path, data, excludeDirectories, excludeFiles, cancellationToken);
-        
+
         result?.Match(
             report => Logger.LogReport(report, format),
             error => Logger.LogError(error)
@@ -103,7 +103,7 @@ public sealed class LocRootCommand : RootCommand
         List<string> excludeFiles = new List<string>(excluded.Length);
         List<string> excludeDirectories = new List<string>(excluded.Length);
 
-        foreach (string filePath in excluded)
+        foreach(string filePath in excluded)
         {
             if(Path.EndsInDirectorySeparator(filePath))
             {
