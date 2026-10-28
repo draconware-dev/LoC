@@ -3,17 +3,17 @@ name: Build
 on:
   workflow_call:
   push:
-    branches: ["main"]
+    branches: ["main", "dev"]
     paths:
       - "**.cs"
       - "**.csproj"
-      - "**.sln"
+      - "**.slnx"
   pull_request:
-    branches: ["dev", "main"]
+    branches: ["main", "dev"]
     paths:
       - "**.cs"
       - "**.csproj"
-      - "**.sln"
+      - "**.slnx"
 
 jobs:
   build:
